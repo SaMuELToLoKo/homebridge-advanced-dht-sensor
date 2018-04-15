@@ -1,0 +1,56 @@
+{
+  "_from": "homebridge-advanced-dht-sensor",
+  "_inBundle": false,
+  "_integrity": "sha512-5FsfrTIzsxnYE9hM2sxK84BHTKNB7HEXw4c83L/UPYfCUb1SnC9sqd1xhR1Q4IFDqnzuQ4FlEH5kvxVqvJlTxA==",
+  "_location": "/homebridge-advanced-dht-sensor",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "homebridge-advanced-dht-sensor",
+    "name": "homebridge-advanced-dht-sensor",
+    "escapedName": "homebridge-advanced-dht-sensor",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "https://registry.npmjs.org/homebridge-advanced-dht-sensor/-/homebridge-advanced-dht-sensor-1.0.0.tgz",
+  "_shasum": "d9b5ae81bef8ad88de9203128c9b106153f6c3b0",
+  "_spec": "homebridge-advanced-dht-sensor",
+  "_where": "/home/homebridge/.homebridge",
+  "author": "SaMuELToLoKo",
+  "bugs": {
+    "url": "https://github.com/SaMuELToLoKo/homebridge-advanced-dht-sensor/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "request": "^2.65.0"
+  },
+  "deprecated": false,
+  "description": "This is a HomeBridge plugin. Allows HomeKit to use your own Temperature + Humidity Sensor under HTTP protocol.",
+  "engines": {
+    "homebridge": ">=0.2.0",
+    "node": ">=0.12.0"
+  },
+  "homepage": "https://github.com/SaMuELToLoKo/homebridge-advanced-dht-sensor#readme",
+  "keywords": [
+    "homebridge-plugin",
+    "homebridge",
+    "dht",
+    "node.js"
+  ],
+  "license": "ISC",
+  "main": "index.js",
+  "name": "homebridge-advanced-dht-sensor",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaMuELToLoKo/homebridge-advanced-dht-sensor.git"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "version": "1.0.0"
+}
