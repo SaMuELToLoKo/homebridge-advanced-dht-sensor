@@ -38,8 +38,8 @@ Configuration sample:
                 "manufacturer": "manufacturer",       // Optional
                 "model": "model",                     // Optional
                 "serial_number": "serial number",     // Optional
-                "humidity": "true"                 // Optional (enable or disable "false" Humidity Sensor)
-                "units": "C"                // Optional (Default C = Celsius) F = Fahrenheit 
+                "humidity": "true"                    // Optional (enable or disable "false" Humidity Sensor)
+                "units": "C"                          // Optional (Default C = Celsius) F = Fahrenheit 
                 
             }
         ],
