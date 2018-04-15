@@ -1,6 +1,6 @@
 // Plujin Temperature + Humidity Sensor for HomeKit - Homebridge
 // Author Samuel Boix Torner
-// Version 1.0.7  // With Battery Status
+// Version 1.0.8  // With Battery Status
 //
 //
 // This plujin allow to our Homebridge to manage a Temperature + Huidity Sensor instance in our own application.
@@ -32,9 +32,9 @@ function DHT_SENSOR(log, config) {
 	this.sendimmediately						= config["sendimmediately"]				||	"";
 	this.username 							= config["username"]					||	"";
 	this.password							= config["password"]					||	"";
-	this.units							= config["units"]							|| 'C'
+	this.units							= config["units"]					|| 'C'
 	this.availableHum 						= config["humidity"]					||	true;
-	this.battery							= config["battery"]						||	false;
+	this.battery							= config["battery"]					||	false;
 
 	this.log(this.name, this.apiAdress);
 
@@ -239,15 +239,15 @@ DHT_SENSOR.prototype = {
       			.on('get', this.getLowStatus.bind(this));
 		}
 
-		if(this.battery === false && this.availabeHum === true) {
+		if(this.battery === false && this.availableHum === true) {
 			return [informationService, this.service, this.humService];
 		}
 
-		else if(this.battery === true && this.availabeHum === false) {
+		else if(this.battery === true && this.availableHum === false) {
 			return [informationService, this.service, this.batService];
 		}
 
-		else if(this.battery === true && this.availabeHum === true) {
+		else if(this.battery === true && this.availableHum === true) {
 			return [informationService, this.service, this.humService, this.batService];
 		}
 
