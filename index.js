@@ -1,6 +1,6 @@
 // Plujin Temperature + Humidity Sensor for HomeKit - Homebridge
 // Author Samuel Boix Torner
-// Version 1.0.0
+// Version 1.0.4
 //
 // This plujin allow to our Homebridge to manage a Temperature + Huidity Sensor instance in our own application.
 
@@ -25,21 +25,21 @@ function DHT_SENSOR(log, config) {
 	this.model							= config["model"]					||	"Homebridge-Dht-Sensor";
 	this.serial_number						= config["serial_number"]				||	"XXX.XXX.XXX.XXX";
 	//Specific config.
-	this.currentHumidity 				= 10;
+	this.currentHumidity 						= 10;
 	this.CurrentTemperature 					= 20;
 	//User config.
 	this.http_method						= config["http_method"]					||	"GET";
 	this.sendimmediately						= config["sendimmediately"]				||	"";
 	this.username 							= config["username"]					||	"";
 	this.password							= config["password"]					||	"";
-	this.units								= config["units"]							|| 'C'
-	this.availableHum 					= config["humidity"]					||	true;
+	this.units							= config["units"]							|| 'C'
+	this.availableHum 						= config["humidity"]					||	true;
 
 	this.log(this.name, this.apiAdress);
 
 	this.service = new Service.TemperatureSensor(this.name);
 	if(this.availableHum === true) {
-		this.service = new Service.HumiditySensor(this.name);
+		this.humService = new Service.HumiditySensor(this.name);
 	}
 
 }
@@ -81,7 +81,7 @@ DHT_SENSOR.prototype = {
 	      	   	}).bind(this));
 		},
 
-	getCurrentHumidity: function(callback) {
+	getCurrentRelativeHumidity: function(callback) {
 	 		this.log('Getting Current Humidity from:', this.apiAdress + '/dht');
 			return request.get({
 				url: this.apiAdress + '/dht',
@@ -125,11 +125,11 @@ DHT_SENSOR.prototype = {
 			.on('get', this.getCurrentTemperature.bind(this));
 
 			if(this.availableHum === true) {
-			this.service
+			this.humService
 			.getCharacteristic(Characteristic.CurrentRelativeHumidity)
 			.on('get', this.getCurrentRelativeHumidity.bind(this));
 
-			this.service
+			this.humService
 			.getCharacteristic(Characteristic.CurrentRelativeHumidity)
 			.setProps({
 				maxValue: 100,
@@ -141,8 +141,8 @@ DHT_SENSOR.prototype = {
 			.getCharacteristic(Characteristic.Name)
 			.on('get', this.getName.bind(this));
 
-			
-			return [informationService, this.service];
+
+			return [informationService, this.service, this.humService];
 
 	}
 
