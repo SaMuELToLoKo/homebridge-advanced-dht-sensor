@@ -1,25 +1,26 @@
 {
-  "_from": "homebridge-advanced-dht-sensor",
+  "_from": "homebridge-advanced-dht-sensor@latest",
   "_inBundle": false,
-  "_integrity": "sha512-5FsfrTIzsxnYE9hM2sxK84BHTKNB7HEXw4c83L/UPYfCUb1SnC9sqd1xhR1Q4IFDqnzuQ4FlEH5kvxVqvJlTxA==",
+  "_integrity": "sha512-RnSsV3faAZwLuUIsa4i8jfB6kIK4GOkZBaAYi0faBltVQ+iy/lOHrEsLnM4pNL82v4hvyIWhELRBockSayAS4g==",
   "_location": "/homebridge-advanced-dht-sensor",
   "_phantomChildren": {},
   "_requested": {
     "type": "tag",
     "registry": true,
-    "raw": "homebridge-advanced-dht-sensor",
+    "raw": "homebridge-advanced-dht-sensor@latest",
     "name": "homebridge-advanced-dht-sensor",
     "escapedName": "homebridge-advanced-dht-sensor",
-    "rawSpec": "",
+    "rawSpec": "latest",
     "saveSpec": null,
     "fetchSpec": "latest"
   },
   "_requiredBy": [
-    "#USER"
+    "#USER",
+    "/"
   ],
-  "_resolved": "https://registry.npmjs.org/homebridge-advanced-dht-sensor/-/homebridge-advanced-dht-sensor-1.0.0.tgz",
-  "_shasum": "d9b5ae81bef8ad88de9203128c9b106153f6c3b0",
-  "_spec": "homebridge-advanced-dht-sensor",
+  "_resolved": "https://registry.npmjs.org/homebridge-advanced-dht-sensor/-/homebridge-advanced-dht-sensor-1.0.4.tgz",
+  "_shasum": "4ab97e00f2baaa406211e377f197bbf459da50b0",
+  "_spec": "homebridge-advanced-dht-sensor@latest",
   "_where": "/home/homebridge/.homebridge",
   "author": "SaMuELToLoKo",
   "bugs": {
@@ -52,5 +53,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.0.0"
+  "version": "1.0.4"
 }
