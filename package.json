@@ -18,7 +18,7 @@
     "#USER",
     "/"
   ],
-  "_resolved": "https://registry.npmjs.org/homebridge-advanced-dht-sensor/-/homebridge-advanced-dht-sensor-1.0.7.tgz",
+  "_resolved": "https://registry.npmjs.org/homebridge-advanced-dht-sensor/-/homebridge-advanced-dht-sensor-1.0.8.tgz",
   "_shasum": "4ab97e00f2baaa406211e377f197bbf459da50b0",
   "_spec": "homebridge-advanced-dht-sensor@latest",
   "_where": "/home/homebridge/.homebridge",
@@ -53,5 +53,5 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "version": "1.0.7"
+  "version": "1.0.8"
 }
