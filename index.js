@@ -11,11 +11,11 @@ var request = require('request');
 module.exports = function(homebridge) {
 	Service = homebridge.hap.Service;
 	Characteristic = homebridge.hap.Characteristic;
-	homebridge.registerAccessory("homebridge-advanced-dht-sensor", "DHT-SENSOR", DHT-SENSOR);
+	homebridge.registerAccessory("homebridge-advanced-dht-sensor", "DHT-SENSOR", DHT_SENSOR);
 };
 
 
-function DHT-SENSOR(log, config) {
+function DHT_SENSOR(log, config) {
 
 	//Generic Config.
 	this.log 							= log;
@@ -44,7 +44,7 @@ function DHT-SENSOR(log, config) {
 
 }
 
-DHT-SENSOR.prototype = {
+DHT_SENSOR.prototype = {
 
 	identify: function(callback) {
 		this.log('Identify requested!');
